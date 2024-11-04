@@ -9,6 +9,7 @@ import { useState } from "react"
 import { useRouter } from 'next/navigation'
 import { Navbar } from "../components/ui/Navbar"
 import { signIn } from 'next-auth/react'
+import { Footer } from "../components/ui/Footer"
 
 export default function Login() {
   const router = useRouter()
@@ -33,7 +34,7 @@ export default function Login() {
       if (result?.error) {
         setError(result.error)
       } else {
-        // router.push('/account')
+        router.push('/account')
       }
     } catch (err: any) {
       setError(err.message || 'Der opstod en fejl ved login')
@@ -90,7 +91,7 @@ export default function Login() {
             )}
 
             <Button
-              className="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-black font-normal"
+              className="w-full bg-[FFD814] hover:bg-[F7CA00] text-black font-normal"
               disabled={loading}
             >
               {loading ? 'Logger ind...' : 'Fortsæt'}
@@ -98,11 +99,11 @@ export default function Login() {
 
             <p className="text-xs">
               Ved at fortsætte accepterer du vores{" "}
-              <Link href="#" className="text-blue-600 hover:text-orange-600 hover:underline">
+              <Link href="" className="text-blue-600 hover:text-orange-600 hover:underline">
                 Brugervilkår
               </Link>{" "}
               og{" "}
-              <Link href="#" className="text-blue-600 hover:text-orange-600 hover:underline">
+              <Link href="" className="text-blue-600 hover:text-orange-600 hover:underline">
                 Privatlivspolitik
               </Link>
               .
@@ -120,10 +121,10 @@ export default function Login() {
 
             {isHelpOpen && (
               <div className="mt-2 space-y-2">
-                <Link href="#" className="block text-sm text-blue-600 hover:text-orange-600 hover:underline">
+                <Link href="" className="block text-sm text-blue-600 hover:text-orange-600 hover:underline">
                   Glemt din adgangskode?
                 </Link>
-                <Link href="#" className="block text-sm text-blue-600 hover:text-orange-600 hover:underline">
+                <Link href="" className="block text-sm text-blue-600 hover:text-orange-600 hover:underline">
                   Andre problemer med login?
                 </Link>
               </div>
@@ -151,17 +152,17 @@ export default function Login() {
 
         <footer className="mt-8 text-xs text-center space-y-4">
           <div className="space-x-4">
-            <Link href="#" className="text-blue-600 hover:text-orange-600 hover:underline">
+            <Link href="" className="text-blue-600 hover:text-orange-600 hover:underline">
               Brugervilkår
             </Link>
-            <Link href="#" className="text-blue-600 hover:text-orange-600 hover:underline">
+            <Link href="" className="text-blue-600 hover:text-orange-600 hover:underline">
               Privatlivspolitik
             </Link>
-            <Link href="#" className="text-blue-600 hover:text-orange-600 hover:underline">
+            <Link href="" className="text-blue-600 hover:text-orange-600 hover:underline">
               Hjælp
             </Link>
           </div>
-          <p className="text-gray-600">© 2024, Alle rettigheder forbeholdes</p>
+          <Footer />
         </footer>
       </div>
     </>
