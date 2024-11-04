@@ -75,7 +75,7 @@ export default function SignUp() {
   return (
     <>
     <Navbar />
-    <div className="min-h-screen flex flex-col items-center px-4 py-8">
+    <div className="flex flex-col items-center px-4 py-8">
       <div className="mb-4">
         <Image
           src="/logo.png"
