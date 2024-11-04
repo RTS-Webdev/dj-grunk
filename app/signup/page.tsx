@@ -25,7 +25,6 @@ export default function Component() {
 
   return (
     <div className="min-h-screen flex flex-col items-center px-4 py-8">
-      {/* Logo */}
       <div className="mb-4">
         <Image
           src="/logo.png"
@@ -35,7 +34,6 @@ export default function Component() {
         />
       </div>
 
-      {/* Main Card */}
       <div className="w-full max-w-[350px] border rounded-lg p-6 space-y-4">
         <h1 className="text-3xl font-normal">Opret bruger</h1>
         
@@ -114,7 +112,6 @@ export default function Component() {
           </p>
         </form>
 
-        {/* Sign In Link */}
         <div className="flex items-center gap-1">
           <span className="text-sm">Har du allerede en bruger?</span>
           <Link href="/login" className="text-sm text-blue-600 hover:text-orange-600 hover:underline">
@@ -123,7 +120,6 @@ export default function Component() {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="mt-8 text-xs text-center space-y-4">
         <div className="space-x-4">
           <Link href="#" className="text-blue-600 hover:text-orange-600 hover:underline">
