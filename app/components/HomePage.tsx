@@ -1,5 +1,6 @@
 import React from 'react'
 import { albums } from '../utils/albums'
+import Image from 'next/image'
 
 export const HomePage = () => {
   return (
@@ -10,7 +11,7 @@ export const HomePage = () => {
           <p className="text-sm md:text-base">
             Her hos DJ Grunk kan du være med til at bestemme hvilken musik der skal indkøbes til Musikbiblioteket.
             Hvis du ikke allerede er oprettet som bruger så skynd dig at blive det. Så får du nemlig også 1500 Grunker
-            som du kan bruge til at "købe" for i musikbutikken. De cd'er der bliver købt flest gange havner på hitlisten
+            som du kan bruge til at &quot;købe&quot; for i musikbutikken. De cd&pos;er der bliver købt flest gange havner på hitlisten
             her til højre og hvis du er med til at få dine favoritter på hitlisten er der større chance for at du hurtigere
             kan låne dem på Musikbiblioteket. Du kan også lave dine egne anmeldelser, så andre brugere kan se hvilken musik der
             er på toppen i øjeblikket.
@@ -28,7 +29,7 @@ export const HomePage = () => {
             .slice(0, 5)
             .map((album) => (
               <div key={album.id} className="flex items-center gap-4">
-                <img 
+                <Image 
                   src={album.img} 
                   alt="Album cover" 
                   className="w-16 h-16 object-cover rounded"
@@ -52,7 +53,7 @@ export const HomePage = () => {
             .slice(0, 3)
             .map((album) => (
               <div key={album.id} className="flex items-center gap-4 bg-gray-50 p-3 rounded-lg">
-                <img 
+                <Image 
                   src={album.img} 
                   alt="Album cover" 
                   className="w-20 h-20 object-cover rounded"

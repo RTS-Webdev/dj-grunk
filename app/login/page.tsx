@@ -69,7 +69,7 @@ export default function Login() {
           </Button>
 
           <p className="text-xs">
-            Ved at fortsætte, accepterer du DJ Grunk's{" "}
+            Ved at fortsætte, accepterer du DJ Grunk&pos;s{" "}
             <Link href="#" className="text-blue-600 hover:text-orange-600 hover:underline">
               Betingelser for brug
             </Link>{" "}
