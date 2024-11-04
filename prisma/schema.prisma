@@ -12,6 +12,7 @@ model User {
   name      String
   email     String  @unique
   pass  String
+  bio       String?
   grunker   Int      @default(1500)
   createdAt DateTime @default(now())
 }
