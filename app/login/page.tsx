@@ -7,13 +7,24 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { Footer } from "../components/ui/Footer"
+import { useRouter } from "next/navigation"
 
 export default function Login() {
   const [isHelpOpen, setIsHelpOpen] = useState(false)
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const router = useRouter()
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (email === "test@test.com" && password === "123") {
+      router.push("/account")
+    }
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center px-4 py-8">
-      {/* Logo */}
       <div className="mb-4">
         <Image
           src="/logo.png"
@@ -23,11 +34,10 @@ export default function Login() {
         />
       </div>
 
-      {/* Main Card */}
       <div className="w-full max-w-[350px] border rounded-lg p-6 space-y-6">
         <h1 className="text-3xl font-normal">Log ind</h1>
         
-        <form className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-1">
               Email eller mobilnummer
@@ -36,10 +46,25 @@ export default function Login() {
               id="email"
               type="text"
               className="w-full border-gray-400"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
-          <Button className="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-black font-normal">
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium mb-1">
+              Adgangskode
+            </label>
+            <Input 
+              id="password"
+              type="password"
+              className="w-full border-gray-400"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          <Button type="submit" className="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-black font-normal">
             Fortsæt
           </Button>
 
@@ -56,7 +81,6 @@ export default function Login() {
           </p>
         </form>
 
-        {/* Help Section */}
         <div>
           <button
             onClick={() => setIsHelpOpen(!isHelpOpen)}
@@ -79,7 +103,6 @@ export default function Login() {
         </div>
       </div>
 
-      {/* New to Amazon Section */}
       <div className="mt-8 w-full max-w-[350px] text-center">
         <div className="relative">
           <hr className="border-gray-300" />
@@ -99,7 +122,6 @@ export default function Login() {
         </Button>
       </div>
 
-      {/* Footer */}
       <footer className="mt-8 text-xs text-center space-y-4">
         <div className="space-x-4">
           <Link href="#" className="text-blue-600 hover:text-orange-600 hover:underline">
