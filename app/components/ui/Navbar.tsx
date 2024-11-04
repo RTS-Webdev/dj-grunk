@@ -13,7 +13,7 @@ export const Navbar = () => {
     <div className="bg-[#131921] text-white w-full">
       <div className="flex items-center p-2 flex-grow">
         <Link href="/" className="mt-2 flex items-center">
-          <Image 
+          <Image
             src="/logo.png"
             alt="DJ Grunk Logo"
             width={100}
@@ -48,9 +48,9 @@ export const Navbar = () => {
 
       <div className="flex items-center bg-[#232f3e] text-white space-x-3 p-2 pl-4">
         <Link href="/" className="link">Forside</Link>
-        <Link href="/musikbutikken" className="link">Musikbutikken</Link>
-        <Link href="/anmeldelser" className="link">Anmeldelser</Link>
-        <Link href="/kontakt" className="link">Kontakt</Link>
+        <Link href="/store" className="link">Musikbutikken</Link>
+        <Link href="/reviews" className="link">Anmeldelser</Link>
+        <Link href="/contact" className="link">Kontakt</Link>
       </div>
     </div>
   )
