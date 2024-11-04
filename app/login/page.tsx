@@ -91,8 +91,11 @@ export default function Login() {
         <Button 
           variant="outline" 
           className="mt-4 w-full bg-gray-100 hover:bg-gray-200"
+          asChild
         >
-          Opret din konto her
+          <Link href="/signup">
+            Opret din konto her
+          </Link>
         </Button>
       </div>
 
