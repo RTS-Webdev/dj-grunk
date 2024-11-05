@@ -2,7 +2,7 @@ export const albums = [
     {
         id: 1,
         title: "Bryan Rice",
-        img: "./albums/BryanRice.jpg",
+        img: "/albums/BryanRice.jpg",
         price: 29.99,
         description: "A powerful vocal performance with emotional depth",
         artist: "Bryan Rice",
@@ -11,7 +11,7 @@ export const albums = [
     {
         id: 2,
         title: "Buble",
-        img: "./albums/buble.jpg",
+        img: "/albums/buble.jpg",
         price: 49.99,
         description: "Classic jazz standards reimagined with modern flair",
         artist: "Michael Buble",
@@ -20,7 +20,7 @@ export const albums = [
     {
         id: 3,
         title: "Clarkson",
-        img: "./albums/clarkson.jpg",
+        img: "/albums/clarkson.jpg",
         price: 39.99,
         description: "Soulful pop anthems that showcase incredible vocals",
         artist: "Kelly Clarkson",
@@ -29,7 +29,7 @@ export const albums = [
     {
         id: 4,
         title: "Crazy Frog More",
-        img: "./albums/CrazyFrogMore.jpg",
+        img: "/albums/CrazyFrogMore.jpg",
         price: 19.99,
         description: "High-energy dance remixes of popular hits",
         artist: "Crazy Frog",
@@ -38,7 +38,7 @@ export const albums = [
     {
         id: 5,
         title: "Danser Med Bedste",
-        img: "./albums/DanserMedBedste.jpg",
+        img: "/albums/DanserMedBedste.jpg",
         price: 69.99,
         description: "Traditional Danish folk music with a contemporary twist",
         artist: "Various Artists",
@@ -47,7 +47,7 @@ export const albums = [
     {
         id: 6,
         title: "Eurovision",
-        img: "./albums/Eurovision.jpg",
+        img: "/albums/Eurovision.jpg",
         price: 79.99,
         description: "Collection of Eurovision's greatest hits and performances",
         artist: "Eurovision All Stars",
@@ -56,7 +56,7 @@ export const albums = [
     {
         id: 7,
         title: "Gnarls Barkley",
-        img: "./albums/Gnarls_Barkley.jpg",
+        img: "/albums/Gnarls_Barkley.jpg",
         price: 44.99,
         description: "Innovative fusion of soul, hip-hop and alternative rock",
         artist: "Gnarls Barkley",
@@ -65,7 +65,7 @@ export const albums = [
     {
         id: 8,
         title: "Johnson Passer",
-        img: "./albums/JohnsonPasser.jpg",
+        img: "/albums/JohnsonPasser.jpg",
         price: 34.99,
         description: "Melodic folk songs with heartfelt lyrics",
         artist: "Johnson Passer",
@@ -74,7 +74,7 @@ export const albums = [
     {
         id: 9,
         title: "Juanes Mi Sangre",
-        img: "./albums/JuanesMiSangre.jpg",
+        img: "/albums/JuanesMiSangre.jpg",
         price: 59.99,
         description: "Passionate Latin rock with Colombian influences",
         artist: "Juanes",
@@ -83,7 +83,7 @@ export const albums = [
     {
         id: 10,
         title: "Knopfler Harris Roadrunning",
-        img: "./albums/KnopflerHarrisRoadrunning.jpg",
+        img: "/albums/KnopflerHarrisRoadrunning.jpg",
         price: 89.99,
         description: "Masterful guitar work meets country-folk storytelling",
         artist: "Mark Knopfler & Emmylou Harris",
@@ -92,7 +92,7 @@ export const albums = [
     {
         id: 11,
         title: "Koppel Improvisationer",
-        img: "./albums/KoppelImprovisationer.jpg",
+        img: "/albums/KoppelImprovisationer.jpg",
         price: 64.99,
         description: "Experimental jazz improvisations with classical elements",
         artist: "Anders Koppel",
@@ -101,7 +101,7 @@ export const albums = [
     {
         id: 12,
         title: "Madonna Confessions",
-        img: "./albums/MadonnaConfessions.jpg",
+        img: "/albums/MadonnaConfessions.jpg",
         price: 74.99,
         description: "Dance-pop perfection from the Queen of Pop",
         artist: "Madonna",
@@ -110,7 +110,7 @@ export const albums = [
     {
         id: 13,
         title: "Orbison Best Of",
-        img: "./albums/OrbisonBestOf.jpg",
+        img: "/albums/OrbisonBestOf.jpg",
         price: 54.99,
         description: "Timeless rock and roll classics from a legendary voice",
         artist: "Roy Orbison",
@@ -119,7 +119,7 @@ export const albums = [
     {
         id: 14,
         title: "Rasmus Nohr Smutning",
-        img: "./albums/RasmusNohrSmutning.jpg",
+        img: "/albums/RasmusNohrSmutning.jpg",
         price: 39.99,
         description: "Danish pop-rock with introspective lyrics",
         artist: "Rasmus Nohr",
@@ -128,7 +128,7 @@ export const albums = [
     {
         id: 15,
         title: "Shakira",
-        img: "./albums/shakira.jpg",
+        img: "/albums/shakira.jpg",
         price: 49.99,
         description: "Global pop hits with Latin and Arabic influences",
         artist: "Shakira",
@@ -137,7 +137,7 @@ export const albums = [
     {
         id: 16,
         title: "Sidsel Where Shoes",
-        img: "./albums/SidselWhereShoes.jpg",
+        img: "/albums/SidselWhereShoes.jpg",
         price: 29.99,
         description: "Alternative indie folk with ethereal vocals",
         artist: "Sidsel Endresen",
@@ -146,7 +146,7 @@ export const albums = [
     {
         id: 17,
         title: "Skousen Daddy Long Leg",
-        img: "./albums/SkousenDaddyLongleg.jpg",
+        img: "/albums/SkousenDaddyLongleg.jpg",
         price: 44.99,
         description: "Blues-inspired rock with Danish sensibilities",
         artist: "Peter Skousen",
@@ -155,7 +155,7 @@ export const albums = [
     {
         id: 18,
         title: "Springsteen Overcome",
-        img: "./albums/SpringsteenOvercome.jpg",
+        img: "/albums/SpringsteenOvercome.jpg",
         price: 79.99,
         description: "Raw, honest rock and roll from The Boss",
         artist: "Bruce Springsteen",
@@ -164,7 +164,7 @@ export const albums = [
     {
         id: 19,
         title: "Stadium Arcadium",
-        img: "./albums/StadiumArcadium.jpg",
+        img: "/albums/StadiumArcadium.jpg",
         price: 69.99,
         description: "Epic funk-rock double album with psychedelic touches",
         artist: "Red Hot Chili Peppers",
@@ -173,7 +173,7 @@ export const albums = [
     {
         id: 20,
         title: "TV2",
-        img: "./albums/TV2.jpg",
+        img: "/albums/TV2.jpg",
         price: 59.99,
         description: "Iconic Danish rock with poetic lyrics",
         artist: "TV-2",
