@@ -91,7 +91,7 @@ export default function Login() {
             )}
 
             <Button
-              className="w-full bg-[FFD814] hover:bg-[F7CA00] text-black font-normal"
+              className="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-black font-normal"
               disabled={loading}
             >
               {loading ? 'Logger ind...' : 'Fortsæt'}
