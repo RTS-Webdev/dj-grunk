@@ -18,7 +18,7 @@ export default function Home() {
                 bestemme hvilken musik der skal indkøbes til Musikbiblioteket.
                 Hvis du ikke allerede er oprettet som bruger så skynd dig at
                 blive det. Så får du nemlig også 1500 Grunker som du kan bruge
-                til at "købe" for i musikbutikken. De cd'er der bliver købt
+                til at &quot;købe&quot; for i musikbutikken. De cd&pos;er der bliver købt
                 flest gange havner på hitlisten her til højre og hvis du er
                 med til at få dine favoritter på hitlisten er der større chance
                 for at du hurtigere kan låne dem på Musikbiblioteket. Du kan

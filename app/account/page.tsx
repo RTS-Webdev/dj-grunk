@@ -2,7 +2,6 @@
 
 import { Camera, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { useState, useRef } from 'react'
 
@@ -34,10 +33,10 @@ export default function ProfilePage() {
             });
             
             if (!response.ok) {
-                const errorData = await response.text();
                 throw new Error(`HTTP error! status: ${response.status}`);
             }    
         } catch (error) {
+            console.log(error);
         }
     };    
 
