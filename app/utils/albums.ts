@@ -11,7 +11,7 @@ export const albums = [
     {
         id: 2,
         title: "Buble",
-        img: "/albums/buble.jpg",
+        img: "/albums/Buble.jpg",
         price: 49.99,
         description: "Classic jazz standards reimagined with modern flair",
         artist: "Michael Buble",
@@ -20,7 +20,7 @@ export const albums = [
     {
         id: 3,
         title: "Clarkson",
-        img: "/albums/clarkson.jpg",
+        img: "/albums/Clarkson.jpg",
         price: 39.99,
         description: "Soulful pop anthems that showcase incredible vocals",
         artist: "Kelly Clarkson",
