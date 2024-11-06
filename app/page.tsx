@@ -2,7 +2,6 @@ import { Navbar } from "./components/ui/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { albums } from "./utils/albums";
-import { convertEuroToDKK } from "./utils/helpers";
 import { Footer } from "./components/ui/Footer";
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
           <Card className="p-6">
             <CardContent className="space-y-4">
               <h2 className="text-2xl font-bold">Welcome</h2>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 Velkommen Hos DJ Grunk. Her hos DJ Grunk kan du være med til at
                 bestemme hvilken musik der skal indkøbes til Musikbiblioteket.
                 Hvis du ikke allerede er oprettet som bruger så skynd dig at
@@ -51,7 +50,7 @@ export default function Home() {
                       <div className="flex-1">
                         <h3 className="font-medium">{album.title}</h3>
                       </div>
-                      <span className="font-bold">{convertEuroToDKK(album.price)} DKK</span>
+                      <span className="font-bold">{album.price} Grunker</span>
                     </div>
                   ))}
               </ul>
@@ -86,7 +85,7 @@ export default function Home() {
                       </div>
                       <div className="text-right">
                         <span className="font-bold text-lg block">
-                          {convertEuroToDKK(album.price)} DKK
+                          {album.price} Grunker
                         </span>
                         <span className="text-sm text-gray-600">
                           {album.year}
