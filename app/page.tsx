@@ -12,7 +12,7 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-3 w-full">
           <Card className="p-6">
             <CardContent className="space-y-4">
-              <h2 className="text-2xl font-bold">Welcome</h2>
+              <h2 className="text-2xl font-bold">Velkommen</h2>
               <p className="text-gray-600">
                 Velkommen Hos DJ Grunk. Her hos DJ Grunk kan du være med til at
                 bestemme hvilken musik der skal indkøbes til Musikbiblioteket.
@@ -33,7 +33,7 @@ export default function Home() {
 
           <Card className="p-6">
             <CardContent className="space-y-4">
-              <h2 className="text-2xl font-bold">Hit List</h2>
+              <h2 className="text-2xl font-bold">Hitlisten</h2>
               <ul className="space-y-2">
                 {[...albums]
                   .sort(() => Math.random() - 0.5)
@@ -57,9 +57,9 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="p-6">
+          <Card className="p-6 rounded-lg">
             <CardContent className="space-y-4">
-              <h2 className="text-2xl font-bold">Featured Albums</h2>
+              <h2 className="text-2xl font-bold">Fremhævede album</h2>
               <div className="grid gap-4">
                 {[...albums]
                   .sort(() => Math.random() - 0.5)
@@ -67,7 +67,7 @@ export default function Home() {
                   .map((album) => (
                     <div
                       key={album.id}
-                      className="flex items-center gap-4 bg-gray-50 p-3 rounded-lg"
+                      className="flex items-center gap-4 p-3 rounded-lg"
                     >
                       <Image
                         src={album.img}
