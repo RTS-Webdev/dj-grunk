@@ -4,12 +4,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Coins } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 export const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <header>
       <nav className="bg-[#131921] text-white w-full">
-        <div className="flex items-center p-4 flex-grow">
+        <div className="flex items-center p-4 flex-grow pr-8">
           <Link href="/" className="mt-2 flex items-center">
             <Image
               src="/logo.png"
@@ -42,10 +45,10 @@ export const Navbar = () => {
 
         <div className="flex items-center bg-[#232f3e] text-white space-x-3 p-2 pl-4">
           <ul className="flex space-x-3">
-            <li><Link href="/" className="link">Forside</Link></li>
-            <li><Link href="/store" className="link">Musikbutikken</Link></li>
-            <li><Link href="/reviews" className="link">Anmeldelser</Link></li>
-            <li><Link href="/contact" className="link">Kontakt</Link></li>
+            <li><Link href="/" className={`link hover:text-yellow-500 ${pathname === '/' ? 'text-yellow-500' : ''}`}>Forside</Link></li>
+            <li><Link href="/store" className={`link hover:text-yellow-500 ${pathname === '/store' ? 'text-yellow-500' : ''}`}>Musikbutikken</Link></li>
+            <li><Link href="/reviews" className={`link hover:text-yellow-500 ${pathname === '/reviews' ? 'text-yellow-500' : ''}`}>Anmeldelser</Link></li>
+            <li><Link href="/contact" className={`link hover:text-yellow-500 ${pathname === '/contact' ? 'text-yellow-500' : ''}`}>Kontakt</Link></li>
           </ul>
         </div>
       </nav>
