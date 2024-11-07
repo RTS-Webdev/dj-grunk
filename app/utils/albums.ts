@@ -6,7 +6,8 @@ export const albums = [
         price: 29.99,
         description: "A powerful vocal performance with emotional depth",
         artist: "Bryan Rice",
-        year: "2024"
+        genre: "POP",
+        year: 2006
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export const albums = [
         price: 49.99,
         description: "Classic jazz standards reimagined with modern flair",
         artist: "Michael Buble",
-        year: "2023"
+        genre: "JAZZ",
+        year: 2009
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ export const albums = [
         price: 39.99,
         description: "Soulful pop anthems that showcase incredible vocals",
         artist: "Kelly Clarkson",
-        year: "2023"
+        genre: "POP",
+        year: 2004
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ export const albums = [
         price: 19.99,
         description: "High-energy dance remixes of popular hits",
         artist: "Crazy Frog",
-        year: "2022"
+        genre: "POP",
+        year: 2005
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ export const albums = [
         price: 69.99,
         description: "Traditional Danish folk music with a contemporary twist",
         artist: "Various Artists",
-        year: "2024"
+        genre: "FOLK",
+        year: 2012
     },
     {
         id: 6,
@@ -51,7 +56,8 @@ export const albums = [
         price: 79.99,
         description: "Collection of Eurovision's greatest hits and performances",
         artist: "Eurovision All Stars",
-        year: "2023"
+        genre: "POP",
+        year: 2010
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ export const albums = [
         price: 44.99,
         description: "Innovative fusion of soul, hip-hop and alternative rock",
         artist: "Gnarls Barkley",
-        year: "2021"
+        genre: "POP",
+        year: 2006
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ export const albums = [
         price: 34.99,
         description: "Melodic folk songs with heartfelt lyrics",
         artist: "Johnson Passer",
-        year: "2022"
+        genre: "FOLK",
+        year: 2015
     },
     {
         id: 9,
@@ -78,7 +86,8 @@ export const albums = [
         price: 59.99,
         description: "Passionate Latin rock with Colombian influences",
         artist: "Juanes",
-        year: "2023"
+        genre: "ROCK",
+        year: 2004
     },
     {
         id: 10,
@@ -87,7 +96,8 @@ export const albums = [
         price: 89.99,
         description: "Masterful guitar work meets country-folk storytelling",
         artist: "Mark Knopfler & Emmylou Harris",
-        year: "2022"
+        genre: "FOLK",
+        year: 2006
     },
     {
         id: 11,
@@ -96,7 +106,8 @@ export const albums = [
         price: 64.99,
         description: "Experimental jazz improvisations with classical elements",
         artist: "Anders Koppel",
-        year: "2024"
+        genre: "JAZZ",
+        year: 1999
     },
     {
         id: 12,
@@ -105,7 +116,8 @@ export const albums = [
         price: 74.99,
         description: "Dance-pop perfection from the Queen of Pop",
         artist: "Madonna",
-        year: "2023"
+        genre: "POP",
+        year: 2006
     },
     {
         id: 13,
@@ -114,7 +126,8 @@ export const albums = [
         price: 54.99,
         description: "Timeless rock and roll classics from a legendary voice",
         artist: "Roy Orbison",
-        year: "2021"
+        genre: "JAZZ",
+        year: 1989
     },
     {
         id: 14,
@@ -123,7 +136,8 @@ export const albums = [
         price: 39.99,
         description: "Danish pop-rock with introspective lyrics",
         artist: "Rasmus Nohr",
-        year: "2023"
+        genre: "FOLK",
+        year: 2011
     },
     {
         id: 15,
@@ -132,7 +146,8 @@ export const albums = [
         price: 49.99,
         description: "Global pop hits with Latin and Arabic influences",
         artist: "Shakira",
-        year: "2022"
+        genre: "JAZZ",
+        year: 2001
     },
     {
         id: 16,
@@ -141,7 +156,8 @@ export const albums = [
         price: 29.99,
         description: "Alternative indie folk with ethereal vocals",
         artist: "Sidsel Endresen",
-        year: "2024"
+        genre: "FOLK",
+        year: 2008
     },
     {
         id: 17,
@@ -150,7 +166,8 @@ export const albums = [
         price: 44.99,
         description: "Blues-inspired rock with Danish sensibilities",
         artist: "Peter Skousen",
-        year: "2023"
+        genre: "ROCK",
+        year: 2003
     },
     {
         id: 18,
@@ -159,7 +176,8 @@ export const albums = [
         price: 79.99,
         description: "Raw, honest rock and roll from The Boss",
         artist: "Bruce Springsteen",
-        year: "2022"
+        genre: "ROCK",
+        year: 1984
     },
     {
         id: 19,
@@ -168,7 +186,8 @@ export const albums = [
         price: 69.99,
         description: "Epic funk-rock double album with psychedelic touches",
         artist: "Red Hot Chili Peppers",
-        year: "2021"
+        genre: "ROCK",
+        year: 2006
     },
     {
         id: 20,
@@ -177,6 +196,7 @@ export const albums = [
         price: 59.99,
         description: "Iconic Danish rock with poetic lyrics",
         artist: "TV-2",
-        year: "2023"
-    },
+        genre: "ROCK",
+        year: 1981
+    }
 ]

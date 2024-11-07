@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import { Footer } from "../components/ui/Footer";
@@ -6,27 +6,24 @@ import { Navbar } from "../components/ui/Navbar";
 import { albums } from "../utils/albums";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function StorePage() {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5;
     const totalPages = Math.ceil(albums.length / itemsPerPage);
+    const router = useRouter();
 
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const currentAlbums = albums.slice(startIndex, endIndex);
 
-    const handlePreviousPage = () => {
-        setCurrentPage((prev) => Math.max(prev - 1, 1));
-    };
+    const handlePreviousPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
+    const handleNextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
 
-    const handleNextPage = () => {
-        setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-    };
-
-    const handleBuyAlbum = (albumId: number) => {
-        console.log(`Køber album med ID: ${albumId}`);
-    };
+    function handleAlbumClick(album: { id: number; title: string; genre: string; img: string; price: number; description: string; artist: string; year: string; }): void {
+        router.push(`/about?title=${encodeURIComponent(album.title)}&artist=${encodeURIComponent(album.artist)}&price=${encodeURIComponent(album.price)}&img=${encodeURIComponent(album.img)}&genre=${encodeURIComponent(album.genre)}`);
+    }
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -44,9 +41,10 @@ export default function StorePage() {
                                 <Image
                                     src={album.img}
                                     alt={`${album.title} cover`}
-                                    width={250}
-                                    height={250}
-                                    className="w-full h-full object-cover rounded-md"
+                                    width={500}
+                                    height={500}
+                                    className="w-full h-full object-cover rounded-md hover:cursor-pointer"
+                                    onClick={() => handleAlbumClick({ ...album, genre: album.genre || 'N/A', year: album.year.toString() })}
                                 />
                                 <h3 className="mt-2 font-bold text-lg text-center">{album.title}</h3>
                                 <p className="text-gray-600 text-sm text-center">{album.artist}</p>
@@ -54,14 +52,13 @@ export default function StorePage() {
                                 <Button
                                     variant="default"
                                     className="mt-2 px-4 py-2 rounded-full bg-blue-700 text-white font-bold hover:bg-blue-800 transition duration-300"
-                                    onClick={() => handleBuyAlbum(album.id)}
                                 >
                                     Køb album
                                 </Button>
                             </article>
                         ))}
                     </div>
-                    
+
                     <nav className="flex justify-center items-center gap-4 mt-8">
                         <Button
                             variant="default"
@@ -85,5 +82,5 @@ export default function StorePage() {
             </main>
             <Footer />
         </div>
-    )
+    );
 }
