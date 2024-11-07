@@ -24,6 +24,10 @@ export default function StorePage() {
         setCurrentPage((prev) => Math.min(prev + 1, totalPages));
     };
 
+    const handleBuyAlbum = (albumId: number) => {
+        console.log(`Køber album med ID: ${albumId}`);
+    };
+
     return (
         <div className="flex flex-col min-h-screen">
             <header>
@@ -47,27 +51,34 @@ export default function StorePage() {
                                 <h3 className="mt-2 font-bold text-lg text-center">{album.title}</h3>
                                 <p className="text-gray-600 text-sm text-center">{album.artist}</p>
                                 <p className="mt-2 font-bold text-lg">{album.price} Grunker</p>
+                                <Button
+                                    variant="default"
+                                    className="mt-2 px-4 py-2 rounded-full bg-blue-700 text-white font-bold hover:bg-blue-800 transition duration-300"
+                                    onClick={() => handleBuyAlbum(album.id)}
+                                >
+                                    Køb album
+                                </Button>
                             </article>
                         ))}
                     </div>
                     
                     <nav className="flex justify-center items-center gap-4 mt-8">
                         <Button
-                            variant="outline"
-                            className="px-4 py-2 transition-transform duration-200 hover:scale-105"
+                            variant="default"
+                            className="px-4 py-2 transition-transform duration-200 hover:scale-105 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full"
                             disabled={currentPage === 1}
                             onClick={handlePreviousPage}
                         >
-                            Previous
+                            Forrige
                         </Button>
-                        <span className="text-sm font-medium">Page {currentPage} of {totalPages}</span>
+                        <span className="text-sm font-medium text-gray-700">Side {currentPage} af {totalPages}</span>
                         <Button
-                            variant="outline"
-                            className="px-4 py-2 transition-transform duration-200 hover:scale-105"
+                            variant="default"
+                            className="px-4 py-2 transition-transform duration-200 hover:scale-105 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full"
                             disabled={currentPage === totalPages}
                             onClick={handleNextPage}
                         >
-                            Next
+                            Næste
                         </Button>
                     </nav>
                 </section>
