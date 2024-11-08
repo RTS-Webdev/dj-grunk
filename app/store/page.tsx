@@ -21,7 +21,7 @@ export default function StorePage() {
     const handlePreviousPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
     const handleNextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
 
-    function handleAlbumClick(album: { id: number; title: string; genre: string; img: string; price: number; description: string; artist: string; year: string; }): void {
+    function handleAlbumClick(album: typeof albums[0]): void {
         router.push(`/about?title=${encodeURIComponent(album.title)}&artist=${encodeURIComponent(album.artist)}&price=${encodeURIComponent(album.price)}&img=${encodeURIComponent(album.img)}&genre=${encodeURIComponent(album.genre)}`);
     }
 
@@ -44,7 +44,7 @@ export default function StorePage() {
                                     width={500}
                                     height={500}
                                     className="w-full h-full object-cover rounded-md hover:cursor-pointer"
-                                    onClick={() => handleAlbumClick({ ...album, genre: album.genre || 'N/A', year: album.year.toString() })}
+                                    onClick={() => handleAlbumClick(album)}
                                 />
                                 <h3 className="mt-2 font-bold text-lg text-center">{album.title}</h3>
                                 <p className="text-gray-600 text-sm text-center">{album.artist}</p>

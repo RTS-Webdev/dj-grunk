@@ -30,9 +30,9 @@ export default function AboutPage() {
             <main className="container mx-auto p-6 flex-grow flex items-center justify-center space-x-10">
                 <Card className="h-fit">
                     <CardContent className="p-8">
-                        <h2 className="font-semibold mb-4">Similar Albums</h2>
+                        <h2 className="font-semibold mb-4">Relaterede albums</h2>
                         <ScrollArea className="h-[300px]">
-                            {albums.filter(album => album.genre === genre.toUpperCase()).map((album) => (
+                            {albums.filter(album => album.genre === genre && album.id !== albums.find(a => a.title === title)?.id).map((album) => (
                                 <div key={album.id} className="flex gap-4 mb-4">
                                     <Image
                                         alt={`${album.title} cover`}
