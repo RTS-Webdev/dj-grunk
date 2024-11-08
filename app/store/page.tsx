@@ -44,7 +44,6 @@ export default function StorePage() {
                                     width={500}
                                     height={500}
                                     className="w-full h-full object-cover rounded-md hover:cursor-pointer"
-                                    onClick={() => handleAlbumClick(album)}
                                 />
                                 <h3 className="mt-2 font-bold text-lg text-center">{album.title}</h3>
                                 <p className="text-gray-600 text-sm text-center">{album.artist}</p>
@@ -52,6 +51,7 @@ export default function StorePage() {
                                 <Button
                                     variant="default"
                                     className="mt-2 px-4 py-2 rounded-full bg-blue-700 text-white font-bold hover:bg-blue-800 transition duration-300"
+                                    onClick={() => handleAlbumClick(album)}
                                 >
                                     Køb album
                                 </Button>

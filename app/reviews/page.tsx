@@ -6,26 +6,14 @@ import { Navbar } from "../components/ui/Navbar";
 import { useState } from "react";
 import Image from "next/image";
 const reviews = [
-    { id: 1, title: "Review 1", content: "This is the first review" },
-    { id: 2, title: "Review 2", content: "This is the second review" },
-    { id: 3, title: "Review 3", content: "This is the third review" },
-    { id: 4, title: "Review 4", content: "This is the fourth review" },
-    { id: 5, title: "Review 5", content: "This is the fifth review" },
-    { id: 6, title: "Review 6", content: "This is the sixth review" },
-    { id: 7, title: "Review 7", content: "This is the seventh review" },
-    { id: 8, title: "Review 8", content: "This is the eighth review" },
-    { id: 9, title: "Review 9", content: "This is the ninth review" },
-    { id: 10, title: "Review 10", content: "This is the tenth review" },
-    { id: 11, title: "Review 11", content: "This is the eleventh review" },
-    { id: 12, title: "Review 12", content: "This is the twelfth review" },
-    { id: 13, title: "Review 13", content: "This is the thirteenth review" },
-    { id: 14, title: "Review 14", content: "This is the fourteenth review" },
-    { id: 15, title: "Review 15", content: "This is the fifteenth review" },
-    { id: 16, title: "Review 16", content: "This is the sixteenth review" },
-    { id: 17, title: "Review 17", content: "This is the seventeenth review" },
-    { id: 18, title: "Review 18", content: "This is the eighteenth review" },
-    { id: 19, title: "Review 19", content: "This is the nineteenth review" },
-    { id: 20, title: "Review 20", content: "This is the twentieth review" },
+    { id: "gnarls", title: "Gnals Barkley", content: "Du skal simpelthen lytte til Gnarls Barkley. Det er det fedeste der er sket på den internationale musikscene i rigtigt rigtigt mange år." },
+    { id: "StadiumArcadium", title: "Rød Varm Peber", content: "Fantastisk dobbeltalbum med den klassiske RHCP-basgang og fuld skrue hele vejen. Køb den før din nabo og skru rigtig højt op!" },
+    { id: "SkousenDaddyLongleg", title: "SKOUSEN", content: "Han er gammel, ham her, men på den fede måde ? Det er en skæv, jazzet CD med nogle helt utrolige tekster. Ikke lige det man er vant til, men det holder 100%." },
+    { id: "KnopflerHarrisRoadrunning", title: "Knopfler & Harris", content: "Jeg er ikke så meget til Dire Straits, og det er der en lille smule for meget af på det her album. Til gengæld synger damen fænomenalt." },
+    { id: "SpringsteenOvercome", title: "Bruce er gud", content: "Sangene på CD’en er ikke skrevet af Springsteen, men af Pete Seeger – en folk-sanger fra for rigtig længe siden. Han var meget politisk, ligesom Springsteen, og det er sangene også. Det er sådan nogle tekster man lige tænker en ekstra gang over." },
+    { id: "JohnsonPasser", title: "DET PASSER", content: "Johnson er smørklatten i dansk hiphops risengrød lige nu. Hans timing kikser aldrig, og vokalen er for fed. Hans producere har til gengæld lavet lige lovlig meget genbrug, men det er jo nok ikke Johnsons skyld. Og han har humor, ikke in-your-face-agtig, men ret diskret. Jeg kan lide det." },
+    { id: "Eurovision", title: "Konkurrence - Hmm.", content: "Jeg fatter det ikke! De har gjort det i over et halvt århundrede, og de er stadig ikke trætte af det. Det er vi andre til gengæld. 1½ times dansktop på pølseengelsk sunget med bizar accent, og nu tilsat alle mulige beats, så ikke engang mormorgenerationen kan lide det mere. Jeg tror jeg sidder over, tak." },
+    { id: "DanserMedBedste", title: "Danser Med Bedste", content: "Lyden fænger egentlig meget godt, kunne man dog bare udgå at høre efter teksterne. Mage til Ude & Hjemme-følelsespornografi skal man lede længe efter. Smagløst, slet og ret. Men sådan noget man godt kan holde ud at høre til naboens havefest, hvor det gud-ske-tak-og-lov er for meget larm til at man kan skelne ordene." },
 ];
 
 export default function Reviews() {
@@ -46,27 +34,29 @@ export default function Reviews() {
             <header>
                 <Navbar />
             </header>
-            <main className="container mx-auto p-6 flex-grow flex items-center">
+            <main className="container mx-auto p-6 flex-grow">
                 <section className="w-full">
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                         {reviews.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((review) => (
-                            <article 
-                                key={review.id} 
+                            <article
+                                key={review.id}
                                 className="flex flex-col items-center p-4 border rounded-lg shadow-sm"
                             >
-                                <Image
-                                    src={"/200x200.svg"}
-                                    alt={`${review.title} cover`}
-                                    width={250}
-                                    height={250}
-                                    className="w-full h-full object-cover rounded-md"
-                                />
+                                <div className="aspect-square w-full relative">
+                                    <Image
+                                        src={`/albums/${review.id}.jpg`}
+                                        alt={`${review.title} cover`}
+                                        fill
+                                        quality={100}
+                                        className="object-cover rounded-md hover:cursor-pointer"
+                                    />
+                                </div>
                                 <h3 className="mt-2 font-bold text-lg text-center">{review.title}</h3>
                                 <p className="text-gray-600 text-sm text-center">{review.content}</p>
                             </article>
                         ))}
                     </div>
-                    
+
                     <nav className="flex justify-center items-center gap-4 mt-8">
                         <Button
                             variant="default"

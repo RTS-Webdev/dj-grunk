@@ -12,19 +12,23 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-3 w-full">
           <Card className="p-6">
             <CardContent className="space-y-4">
-              <h2 className="text-2xl font-bold">Velkommen</h2>
+              <h2 className="text-2xl font-bold">Velkommen til DJ Grunk</h2>
               <p className="text-gray-600">
-                Velkommen Hos DJ Grunk. Her hos DJ Grunk kan du være med til at
+                Her hos DJ Grunk kan du være med til at
                 bestemme hvilken musik der skal indkøbes til Musikbiblioteket.
                 Hvis du ikke allerede er oprettet som bruger så skynd dig at
                 blive det. Så får du nemlig også 1500 Grunker som du kan bruge
-                til at &quot;købe&quot; for i musikbutikken. De cd&pos;er der bliver købt
+                til at &quot;købe&quot; for i musikbutikken.
+              </p>
+              <p className="text-gray-600">
+                De cd&apos;er der bliver købt
                 flest gange havner på hitlisten her til højre og hvis du er
                 med til at få dine favoritter på hitlisten er der større chance
                 for at du hurtigere kan låne dem på Musikbiblioteket. Du kan
                 også lave dine egne anmeldelser, så andre brugere kan se hvilken
                 musik der er på toppen i øjeblikket.
-                <br /> <br />
+              </p>
+              <p className="text-gray-600">
                 Kig dig omkring og vær med
                 til at sætte liv i kludene. DJ Grunk.
               </p>
@@ -77,10 +81,11 @@ export default function Home() {
                         className="w-20 h-20 object-cover rounded"
                       />
                       <div className="flex-1">
-                        <h3 className="font-bold text-lg">{album.title}</h3>
+                        <h3 className="font-bold text-lg text-wrap">{album.title}</h3>
                         <p className="text-gray-600">{album.artist}</p>
                         <p className="text-sm mt-1 line-clamp-2">
-                          {album.description}
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          Quisquam, quos.
                         </p>
                       </div>
                       <div className="text-right">
